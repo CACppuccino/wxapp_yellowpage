@@ -1,0 +1,50 @@
+<!--category.wxml-->  
+<scroll-view class=" weui-panel weui-panel_access">
+  <view wx:if="{{jobs}}">
+  <view wx:for="{{recruit}}" class="weui-panel__bd border" >
+    <view id="{{item.id}}" class='weui-media-box weui-media-box_appmsg' bindtap="goJobDes">
+      <view class="weui-media-box__bd" style='padding-left: 30rpx;'>
+        <view class='phone fa fa-phone' id='{{item.phone}}' catch:tap='call'></view>
+        <view class=" weui-media-box__title moreclasp"><text >{{item.title}}</text></view>
+        <view class='weui-media-box__desc'>
+          <view>商家：<text>{{item.name.name}}</text></view>
+          <view>发布时间：<text>{{item.time}}</text></view>
+        </view>
+      </view>
+    </view>
+  </view>  
+  </view>
+  <view wx:else>
+  <view wx:for="{{busn}}" class="weui-panel__bd border" >
+    <view id="{{item.name}}" class='weui-media-box weui-media-box_appmsg' bindtap="goRestaurant">
+      <view class="weui-media-box__hd">
+        <view wx:if="{{item.cover_nail}}">
+        <image src="https://aws.canberracircle.com{{item.cover_nail}}" class="weui-media-box__thumb img" > </image>
+        </view>
+        <view wx:else>
+        <image src='/imgs/logo.jpg' class='weui-media-box__thumb img'></image>
+        </view>
+      </view>
+      <view class="weui-media-box__bd" style='padding-left: 30rpx;'>
+        <view class='phone fa fa-phone' id='{{item.phone}}' catch:tap='call'></view>
+        <view class=" weui-media-box__title"><text >{{item.name}}</text> </view>
+        <view class='weui-media-box__desc'>
+          
+          <view wx:if="{{item.cost_average_low!==0 || item.cost_average_high!==0}}">
+          <view><text>AUD {{item.cost_average_low}}~{{item.cost_average_high}}/人</text></view>
+          </view>
+
+          <view wx:if="{{item.op_time !=='unknow'}}">
+          <view><text>{{item.op_time}}</text></view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  <view wx:if="{{busn || recruit}}" class='declare'>
+    <view><label>堪城圈生活黄页持续招商中\n</label><br /></view>
+    <label>欢迎联系 business@cbrcircle.com</label>
+  </view>
+</scroll-view>

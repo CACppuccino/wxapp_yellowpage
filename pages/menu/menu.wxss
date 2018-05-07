@@ -1,0 +1,90 @@
+/* pages/menu/menu.wxss */
+@import '/utils/bootstrap.wxss';
+@import '/utils/fontaws.wxss';
+
+page{
+  background-color: white;
+  height: 100%;
+}
+.non{
+  text-align:center;
+  color: gray;
+  padding: 20rpx;
+}
+.sidebar{
+  /* background-color: yellow;
+  color: white; */
+   /* background: linear-gradient(to bottom right, grey , black);  */
+  color: gray;
+  text-align: center;
+  font-size: 30rpx;
+  font-stretch: 2rpx;
+}
+.ss{
+  background-color: white;
+}
+.us{
+  background-color: #ebebeb;
+}
+.wrapper, .unwrap{
+  margin: 0px 10px;
+}
+.wrapper{
+  border-bottom: 1rpx dashed darkgray;
+}
+.oneline{
+  word-break: keep-all;
+  white-space: nowrap;
+}
+.busn{
+  background-color: #382c2c;
+text-align:left;
+color:white;
+/* font-weight:bolder; */
+font-size: 30rpx;
+}
+.wphd{
+  padding: 28rpx 30rpx 20rpx;
+  position: relative;
+}
+.label{
+  text-align: left;
+  font-size: 30rpx;
+}
+.wimg, .info{
+  padding: 30rpx;
+}
+.info{
+  opacity: 1;
+  background-color: white;
+}
+.blkglass{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 999;
+}
+.weui-media-box__thumb{
+  height: 160rpx;
+  width: 160rpx;
+}
+.selected{
+  background-color: white;
+}
+.unselected{
+  background-color: #ebebeb;
+}
+.price{
+  color: red;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.price, .weui-media-box__title, .weui-media-box__desc{
+  padding-left: 30rpx;
+}
+/* 
+.weui-media-box_appmsg{
+  background: linear-gradient(to bottom right, grey, blue);
+} */

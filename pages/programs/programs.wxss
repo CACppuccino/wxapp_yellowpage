@@ -1,0 +1,9 @@
+/* pages/programs/programs.wxss */
+@import '../../utils/bootstrap.wxss';
+@import '../more/more.wxss';
+.title{
+  text-align: center;
+}
+page{
+  background-color: white;
+}

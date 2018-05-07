@@ -1,0 +1,14 @@
+/* pages/test.wxss */
+@import '../shop/shop.wxss';
+
+page{
+  background-color: white;
+}
+
+.img{
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  height: 300rpx;
+  width: 300rpx;
+}

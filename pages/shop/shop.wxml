@@ -1,0 +1,110 @@
+<!--shop.wxml-->
+<scroll-view scroll-y="true" class="scview">
+  
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500"> 
+    <block wx:for="{{banners}}" wx:key="id">
+      <swiper-item>
+        <image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}"/>
+      </swiper-item>
+    </block>
+    <button class='share_button clear_default_button' open-type='share'>
+      <p>分享</p>
+      <i class='fa fa-share-alt'></i>
+      <view></view>
+    </button>
+  </swiper>
+
+  <view class="abstract weui-flex">
+    <view class="texts weui-flex__item weui-media-box weui-media-box_text">
+      <view class='weui-media-box__title' style='width:620rpx;'><text class="title">{{busn.name}}\n</text></view>
+      <!-- if neither is 0 -->
+      <view wx:if="{{busn.cost_average_low!==0 || busn.cost_average_high!==0}}">
+      <view class='weui-media-box__desc'><text class="info" style="font-size:30rpx;">${{busn.cost_average_low}} - {{busn.cost_average_high}}/人\n</text></view>
+      </view>
+      <!-- if is not unknow  -->
+      <view wx:if="{{busn.op_time!=='unknow'}}">
+      <view class='weui-media-box__desc'><text class="info" style='font-size:30rpx;line-height:10px;'>{{busn.op_time}}<br /></text></view>
+    </view>
+      </view>
+    <view  bindtap='likethis' data-job="false">
+      <view class='fa fa-star likethis' style="color:{{liked?'yellow':'grey'}};"></view>
+    </view> 
+  </view>
+
+<!-- detail cell items -->
+  <view class="abstract ">
+
+    <view wx:if="{{busn.phone!=='0'}}">
+    <view class='item'>
+      <view class='item_tag'bindtap='phone' >联系方式</view>
+      <view class='item_des' bindtap='phone' data-pn='{{busn.phone}}'>{{busn.phone}}</view>
+      <i class='fa fa-phone' bindtap='phone' data-pn='{{busn.phone}}' style='color:green; float: right; padding-right: 55rpx;'></i>
+    </view>
+    </view>
+
+    <view wx:if="{{jobs && jobDes.name.phone!=='0'}}" class='item'>
+      <view class='item_tag'>招聘电话</view>
+      <view class='item_des' bindtap='phone' data-pn='{{busn.phone}}'>{{jobDes.name.phone}}</view>
+      <i class='fa fa-phone' bindtap='phone' data-pn='{{busn.phone}}' style='color:green; float: right; padding-right: 55rpx;'></i>
+    </view>
+
+    <view class='item' wx:if="{{busn.geo_lat!=='22.336164' && busn.geo_lng!=='52.030018'}}">
+      <view class='item_tag' style='overflow: hidden;'>地址</view>
+      <view class='item_des' bindtap='map' style='overflow: hidden; white-space:nowrap; width:60%;text-overflow:ellipsis;'>{{busn.address}}</view>
+      <i class='fa fa-map' bindtap='map' style='color:green; float: right; padding-right: 55rpx;'></i>
+    </view>
+
+  
+  <view wx:if="{{busn.email!=='unknow'}}">
+      <view class='item'>
+      <view class='item_tag' style='overflow: hidden;'>邮箱</view>
+      <view class='item_des' bindtap='copyToBoard' data-cb='{{busn.email}}' style='overflow: hidden; white-space:nowrap; width:60%;text-overflow:ellipsis;'><text selectable='true'>{{busn.email}}</text></view>
+      <i class='fa fa-envelope' bindtap='copyToBoard' data-cb='{{busn.email}}' style='color:green; float: right; padding-right: 55rpx;'></i>
+    </view>
+  </view>
+        
+   <view wx:if="{{busn.wechat!=='unknow'}}">     
+        <view class='item'>
+      <view class='item_tag' style='overflow: hidden;'>微信</view>
+      <view class='item_des' bindtap='copyToBoard' data-cb='{{busn.wechat}}' style='overflow: hidden; white-space:nowrap; width:60%;text-overflow:ellipsis;'><text selectable='true'>{{busn.wechat}}</text><text style='color:gray'>（点击复制至剪贴板）</text></view>
+      <i class='fa fa-wechat' bindtap='copyToBoard' data-cb='{{busn.wechat}}' style='color:green; float: right; padding-right: 55rpx;'></i>
+    </view>
+  </view>
+  </view>
+
+  <view wx:if="{{busn.has_menu}}">
+    <view class='item'>
+      <view class='item_tag' style='overflow: hidden;'>产品</view>
+      <view class='item_des' bindtap='toMenu' style='overflow: hidden; white-space:nowrap; width:60%;text-overflow:ellipsis;'>点击查看</view>
+      <i class='fa fa-list' bindtap='toMenu' style='color:green; float: right; padding-right: 55rpx;'></i>
+    </view>
+  </view>
+
+<view wx:if="{{jobs}}" class='weui-media-box intro'>
+    <view  bindtap='likethis' data-job="true">
+      <view class='fa fa-star likethis' style="color:{{likedJob?'yellow':'grey'}};"></view>
+    </view> 
+    <view class='job__title'>
+    <text>{{jobDes.title}}</text>
+    </view>
+    <view class='weui-media-box__desc' style='font-size:26rpx'>
+   发布时间：{{jobDes.time}}
+    </view>
+    <view class='weui-media-box_text'>
+      <text >
+        {{jobDes.info}}
+      </text>
+    </view>
+</view>
+
+<view class="weui-flex intro" style="{{jobs?'margin-top:60rpx':''}}">
+    <text >
+      {{busn.info}}
+    </text>
+  </view>
+ 
+<view class='declare' style='color:red;font-weight:bold;font-size:25rpx;'>
+  <view><label>免责声明</label></view>
+  <view><label>本页面信息来自商家，堪城圈负责汇总以供大家便捷查找</label></view>
+</view>
+</scroll-view>

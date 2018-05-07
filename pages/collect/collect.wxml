@@ -1,0 +1,19 @@
+<!--pages/collect/collect.wxml-->
+<scroll-view class='weui-panel weui-panel_access'>
+  <view wx:if="{{collections}}">
+    <view class='weui-panel__hd'>收藏列表</view>
+    <view class='weui-panel__bd'>
+      <view wx:for="{{collections}}" class="weui-media-box weui-media-box_text">
+        
+      <view id='{{item.bid}}' data-jid="{{item.jid}}" bindtap='goRes'>
+        <label class='weui-media-box__title' >{{item.title?'【工作】':''}}{{item.bid}}</label>
+        <view class='weui-media-box__desc'>{{item.title}}</view>
+      </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <label>空空如也哦~</label>
+  </view>
+  
+</scroll-view>

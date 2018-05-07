@@ -1,0 +1,119 @@
+<view class="container">
+	<!-- 透明图标 -->
+  <view class="header {{scrollDown?'scrolled':''}}">
+		<view class="location ellipsis" >
+			<!-- <image class="icon" src="/imgs/index/icon_location.png"/> -->
+      <!-- <view class='fa fa-usd' style='font-size:30rpx;color:white;display:inline;'></view>   -->
+      $ / ￥： {{currency}}
+
+		</view>
+    <!-- end  -->
+		<!-- <view class="search" bindtap="tapSearch" style='display:none'>
+			<image class="icon" src="/imgs/index/icon_search.png"/>
+			<i class="fa fa-home"></i>
+			烤鸭
+		</view> -->
+	</view>
+
+	<scroll-view scroll-y="true" scroll-into-view="{{scrollIntoView}}" bindscroll="onScroll">
+  <!-- banner at the top -->
+		<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500"> 
+			<block wx:for="{{banners}}" wx:key="id">
+				<swiper-item>
+					<image bindtap="tapBanner" id='{{item.url}}' data-id="{{index}}" src="{{item.image}}"/>
+				</swiper-item>
+			</block>
+		</swiper>
+<!-- end baneer  -->
+		<!-- <swiper class="section icons" indicator-dots="true" autoplay="" interval="" duration="500">
+			<swiper-item wx:for="{{icons}}" wx:for-item="list" wx:key="id">
+				<view class="icon" wx:for="{{list}}" wx:for-item="icon" wx:key="id" bindtap="toNearby">
+					<image src="{{icon.img}}"/>
+					<text>{{icon.name}}</text>
+				</view>
+			</swiper-item>
+		</swiper> -->
+
+    <view class="section icons" indicator-dots="true" autoplay="" interval="" duration="500">
+			<view wx:for="{{icons}}" wx:for-item="list" wx:key="id">
+				<view class="icon" wx:for="{{list}}" wx:for-item="icon" wx:key="id" >
+					<view  id="{{icon.category}}" bindtap="toNearby">
+            <image src="{{icon.img}}"/>
+					</view> 
+          <text>{{icon.name}}</text>
+				</view>
+			</view>
+      
+       <view class="icon" >
+					<view  id="More" bindtap="toMore">
+            <image src="/imgs/index/icon_12.jpg"/>
+					</view>
+          <text>生活服务</text>
+			</view>
+
+      <view class="icon" >
+					<view  id="More" bindtap="toJobs">
+            <image src="/imgs/index/icon_6.jpg"/>
+					</view>
+          <text>招聘</text>
+				</view>
+	
+     <view class="icon" >
+        <navigator url='../programs/programs'>
+					<view  id="More" >
+            <image src="/imgs/index/icon_7.jpg"/>
+					</view>
+          <text>小程序</text>
+          </navigator>
+				</view>
+
+		</view>
+<!-- middle bar -->
+		<view id="nearby" class="section section-big nearby">
+			<view class="filters">
+				<!-- <view class="filter {{filterId==1?'active':''}}" data-id="1" bindtap="tapFilter">热门商家</view> -->
+				<view class="filter {{filterId==2?'active':''}}" data-id="2" bindtap="tapFilter">近期活动</view>
+			</view>
+		<!-- pannel start  -->
+    <view class='weui-panel weui-panel_access' style='margin-top:0px;'>
+      <!-- card start  -->
+      
+      <view wx:for="{{recentAct}}" class='weui-panel__bd border'>
+        <view class='weui-media-box weui-media-box_appmsg' id='{{item.url}}' bindtap='tapBanner'>
+          <view class='weui-media-box__hd'>
+            <image style='height:50px;width:50px;' src='{{item.thumbnail}}'></image>
+          </view>
+          <view style='padding-left:60rpx;'  class='weui-media-box__bd'>
+            <view class='weui-media-box__title'>{{item.title}}</view>
+            <view class='weui-media-box__desc'>{{item.info}}</view>
+            <view class='discountTag Tag' wx:if='{{item.activity==="discount"}}'>discount</view>
+            <view class='cbrTag Tag' wx:if='{{item.activity==="堪城"}}'>堪城</view>
+            <view class='recomTag Tag' wx:if='{{item.activity==="recom"}}'>推荐</view>
+            <view class='recentTag Tag' wx:if='{{item.activity==="recent"}}'>近期</view>
+            <view class='card'>{{item.holder}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!-- card end  -->
+      <!-- card start  -->
+      <!-- <view class='weui-panel__bd border'>
+        <view class='weui-media-box weui-media-box_appmsg'>
+           <view class='weui-media-box__hd'> 
+            <image style='height:50px;width:50px;' src='../../imgs/tabBar/demo02.jpg'></image>
+           </view> 
+          <view style='padding-left:60rpx;' class='weui-media-box__bd'>
+            <view class='weui-media-box__title'>title</view>
+            <view class='weui-media-box__desc'>context some contest...is here</view>
+          </view>
+        </view>
+      </view> -->
+      <!-- card end  -->
+      
+    </view>
+    <!-- pannel end  -->
+    
+    </view>
+    
+	</scroll-view>
+</view>

@@ -1,0 +1,21 @@
+<view class="container">
+	<view class="header">
+		<image class="avatar" src="{{userInfo.avatarUrl}}" />
+		<view class='namebk'><view class="nickname">{{userInfo.nickName}}</view></view>
+	</view>
+	<view class="section">
+		<!-- <navigator url="/page/order/order"><view class="line judgement">我的订单</view></navigator> -->
+		<!-- <view class="line judgement">我的好友</view> -->
+		<view class="line judgement" bindtap='goCollect'>我的收藏</view>
+		<!-- <view class="line judgement">我的地址</view> -->
+	</view>
+	<!-- <view class="section"> -->
+		<!-- <view class="line judgement">我的钱包<text class="tl">余额：￥0</text></view> -->
+	<!-- </view> -->
+	<view class="section">
+  <navigator url='/pages/test/test'>
+		<view class="line judgement">联系@我们</view>
+  </navigator>
+	</view>
+
+</view>

@@ -1,0 +1,2 @@
+/* pages/collect/collect.wxss */
+@import '../../utils/bootstrap.wxss'

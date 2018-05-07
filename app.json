@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/more/more",
+    "pages/mine/mine",
+    "pages/category/category",
+    "pages/map/map",
+    "pages/collect/collect",
+    "pages/articles/articles",
+    "pages/programs/programs",
+    "pages/test/test",
+    "pages/menu/menu"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#334a86",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "堪城圈生活黄页"
+  },
+  "tabBar": {
+    "color": "#878787",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#fcfcfc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "imgs/tabBar/home_2.png",
+        "selectedIconPath": "imgs/tabBar/home_1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "imgs/tabBar/mine_2.png",
+        "selectedIconPath": "imgs/tabBar/mine_1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

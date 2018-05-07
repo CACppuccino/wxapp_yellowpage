@@ -1,0 +1,183 @@
+/* shop.wxss */
+@import "../index/index.wxss";
+@import "../../app.wxss";
+@import "../../utils/bootstrap.wxss";
+@import "../../utils/fontaws.wxss";
+
+#btn_share_job{
+  border: 0px solid white;
+  background-color: white;
+}
+
+.job__title{
+  width: 600rpx;
+  word-wrap: break-word;
+  font-size: 29rpx;
+  overflow: hidden;
+}
+.weui-media-box__desc{
+  font-size: 50rpx;
+}
+.scview{
+  /* background-color: beige; */
+  font-family: "Microsoft Yahei";
+}
+.likethis{
+  float: right;
+  font-size: 48rpx;
+  right: 30rpx;
+  position: absolute;
+}
+.gallery{
+   height: 100rpx; 
+  /* flex: display; */
+  display: flex;
+  white-space: nowrap;
+}
+.gallery-box{
+  width: 230rpx;
+  height: 100rpx;
+  display: inline-block;
+}
+.gallery-pic{
+  /* display: block; */
+  height:100rpx;
+  width: 230rpx;
+}
+.texts{
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  background-color: white;
+}
+.black-cover{
+  background: black;
+  opacity: 0.5;
+  height: 20rpx;
+  margin-bottom: 0;
+  float: bottom;
+}
+button{
+  width: 750rpx;
+}
+.weui-cell__bd, .weui-cell__ft{
+  font-size: 0.8rem;
+}
+
+
+.intro{
+  display: block;
+  background-color: white;
+  padding: 20rpx;
+  font-family: "Microsoft Yahei";  
+  text-align: justice;
+  text-indent: 8rpx;
+  font-size: 28rpx;
+}
+
+.title{
+  color: black;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.pic{
+  position: absolute;
+  left: 10px;
+}
+.info{
+  font-size: 0.7rem;
+  color:lightgray;
+}
+.img{
+  height: 300rpx;
+  width: 100%;
+/* -webkit-mask-image:  -webkit-radial-gradient(50% 50%,rgba(0,0,0,0),rgba(0,0,0,1)); */
+}
+.bg-white{
+  background-color: white;
+}
+
+.caption{
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  display: block;
+  color: #f1a23b;
+  margin-bottom: 3%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.banner {
+  margin: 10rpx 10rpx;
+}
+
+.scview {
+  background-color: white;
+}
+
+.share_button {
+  position: absolute;
+  right: 20rpx;
+  bottom: 30rpx;
+  height: 20%;
+  width: 18%;
+}
+
+.share_button > view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+  border-radius: 50rpx;
+  z-index: 998;
+}
+
+.share_button > p {
+  color: white;
+  font-size: 28rpx;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20rpx;
+}
+
+.share_button > i {
+  color: white;
+  font-size: 28rpx;
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20rpx;
+}
+
+.clear_default_button {
+  padding: 0rpx;
+  background-color: transparent;
+  color: transparent;
+
+}
+
+.item {
+  border-bottom: 1rpx solid lightgray;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+.item_tag {
+  display: inline-block;
+  color: gray;
+  width: 20%;
+  padding-left: 5%;
+  font-size: 28rpx;
+}
+
+.item_des {
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.weui-media-box__title, .weui-media-box_text {
+  font-size: 29rpx;
+}

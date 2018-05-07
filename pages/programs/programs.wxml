@@ -1,0 +1,23 @@
+<!--pages/programs/programs.wxml-->
+
+<!--pages/more/more.wxml-->
+<view class="page" style='height:100%;background-color:white;'>
+    <view class="page__hd">
+        <view class="page__title title" >堪城圈小程序</view>
+        <!-- <view class="page__desc" style='text-align:center;'>九宫格</view> -->
+    </view>
+    <view class="page__bd">
+        <view class="weui-grids">
+             <block > 
+            <!-- 这里的小程序appid需要填写在data-name中来替换 -->
+                <view data-name="yourAppId" bindtap="toMiniPro" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/imgs/logo.jpg" /> 
+                    <view class="weui-grid__label">ANU课程表</view>
+                </view>
+            </block>
+            
+            <!-- </block> -->
+        </view>
+    </view>
+
+</view>

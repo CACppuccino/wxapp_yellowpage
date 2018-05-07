@@ -1,0 +1,2 @@
+<!--map.wxml-->
+<map class='themap' scale="17" latitude='{{lat}}' markers='{{markers}}' longitude='{{lng}}'></map>

@@ -1,0 +1,57 @@
+/* pages/more/more.wxss */
+@import '../../utils/bootstrap.wxss';
+@import '../../utils/fontaws.wxss';
+
+.title{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  font-weight: bolder;
+}filterfilter
+
+.info_block {
+  margin: 32rpx 0rpx;
+}
+
+.info_block > view {
+  background-color: white;
+}
+
+.info_block > .page__bd {
+  padding-left: 80rpx;
+  padding-bottom: 20rpx;
+}
+
+.info_block > .page__hd {
+  padding-top: 20rpx;
+  padding-bottom: 5rpx;
+  border-bottom: 1px solid lightgray;
+}
+
+.weui-grid__label_cus {
+  text-align: left;
+}
+
+.page__hd > .fa {
+  position: absolute;
+  padding-left: 30rpx;
+}
+
+.page__hd > .weui-grid__label {
+  display: block;
+  padding-left: 80rpx;
+  height: 100%;
+  margin-top: 3rpx;
+}
+
+.weui-grids_cus {
+  border-top: 0rpx;
+  border-left: 0rpx;
+}
+
+.weui-grid_cus {
+  border-right: 0rpx;
+  border-bottom: 0rpx;
+  padding: 10rpx 5rpx;
+  overflow: hidden;
+}

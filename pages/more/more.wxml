@@ -1,0 +1,84 @@
+<!--pages/more/more.wxml-->
+<view class="page" style='z-index:-999'>
+<view style='opacity:1'>
+    <view class="info_block">
+      <view class="page__hd">
+        <i class='fa fa-home' style='color: red;'></i>
+        <view class="weui-grid__label weui-grid__label_cus" >住房相关</view>
+      </view>
+      <view class="page__bd">
+          <view class="weui-grids weui-grids_cus">
+              <block wx:for="{{grids1}}" wx:key="*this"> 
+              <!-- <block> -->
+                  <view  class="weui-grid weui-grid_cus" hover-class="weui-grid_active">
+                      <view bind:tap="goCategory" class="weui-grid__label weui-grid__label_cus" id="{{item.tag}}">{{item.name}}</view>
+                  </view>
+              </block>
+              
+              <!-- </block> -->
+          </view>
+      </view>
+    </view>
+
+    <view class="info_block">
+      <view class="page__hd">
+        <i class='fa fa-heart-o' style='color: green;'></i>
+        <p class="weui-grid__label weui-grid__label_cus" >生活服务</p>
+      </view>
+      <view class="page__bd">
+          <view class="weui-grids weui-grids_cus">
+              <block wx:for="{{grids2}}" wx:key="*this"> 
+              <!-- <block> -->
+                  <view  class="weui-grid  weui-grid_cus" hover-class="weui-grid_active">
+                      <!-- <image class="weui-grid__icon" src="/imgs/index/icon_1.jpg" /> -->
+                      <view bind:tap="goCategory" class="weui-grid__label weui-grid__label_cus" id="{{item.tag}}">{{item.name}}</view>
+                  </view>
+              </block>
+              
+              <!-- </block> -->
+          </view>
+      </view>
+    </view>
+
+    <view class="info_block">
+      <view class="page__hd">
+        <i class='fa fa-medkit' style='color: blue;'></i>
+        <p class="weui-grid__label weui-grid__label_cus" >医疗保健</p>
+      </view>
+      <view class="page__bd">
+          <view class="weui-grids weui-grids_cus">
+              <block wx:for="{{grids3}}" wx:key="*this"> 
+              <!-- <block> -->
+                  <view class="weui-grid weui-grid_cus" hover-class="weui-grid_active">
+                      <!-- <image class="weui-grid__icon" src="/imgs/index/icon_1.jpg" /> -->
+                      <view bind:tap="goCategory" class="weui-grid__label weui-grid__label_cus" id="{{item.tag}}">{{item.name}}</view>
+                  </view>
+              </block>
+              
+              <!-- </block> -->
+          </view>
+      </view>
+    </view>
+    <view class="info_block">
+      <view class="page__hd">
+        <i class='fa fa-money' style='color: brown;'></i>
+        <p class="weui-grid__label weui-grid__label_cus">生意服务</p>
+      </view>
+      <view class="page__bd">
+          <view class="weui-grids weui-grids_cus">
+              <block wx:for="{{grids4}}" wx:key="*this"> 
+              <!-- <block> -->
+                  <view  class="weui-grid weui-grid_cus" hover-class="weui-grid_active">
+                      <!-- <image class="weui-grid__icon" src="/imgs/index/icon_1.jpg" /> -->
+                      <view bind:tap="goCategory" class="weui-grid__label weui-grid__label_cus" id="{{item.tag}}">{{item.name}}</view>
+                  </view>
+              </block>
+              
+              <!-- </block> -->
+          </view>
+      </view>
+    </view>
+    </view>
+    <!--opacity = 1   -->
+</view>
+<!-- opacity=0.5  -->

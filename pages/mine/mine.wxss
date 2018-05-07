@@ -1,0 +1,48 @@
+.header {
+	/* background: #0feefe; */
+   background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513252695177&di=1eb7c44b59d7423085e4dc15cd59ae93&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F7%2F55402f3532334.jpg'); 
+	padding: 30rpx;
+}
+.namebk {
+  background-color: white;
+  opacity: 0.3;
+}
+.header .avatar {
+	display: block;
+	margin: 0 auto;
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 50%;
+	border: 2px solid #fee767;
+}
+.header .nickname {
+	color: #000;
+	font-size: 22px;
+	line-height: 2.4;
+	text-align: center;
+}
+
+.section {
+	padding: 0;
+	color: #2e2e2e;
+	font-size: 30rpx;
+}
+.section .line {
+	margin-left: 30rpx;
+	padding-right: 30rpx;
+	line-height: 3;
+	border-bottom: 1px solid #efefef;
+}
+.section .line:last-child {
+	border-bottom: none;
+}
+.section .line:before {
+	content: '>';
+	float: right;
+	color: #aaa;
+	margin-left: 20rpx;
+}
+.section .line .tl {
+	float: right;
+	color: #aaa;
+}

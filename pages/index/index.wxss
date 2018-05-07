@@ -1,0 +1,268 @@
+@import '../../utils/bootstrap.wxss';
+@import '../../utils/fontaws.wxss';
+page {
+	height: 100%;
+}
+.card{
+  top: 10rpx;
+  background-color: grey;
+  opacity: 0.5;
+  color: white;
+  padding: 0px 5px;
+  position: absolute;
+  right: 10px;
+}
+.Tag{
+  margin-top: 10rpx;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  width: 120rpx;
+  padding: 0px 20rpx;
+}
+.cbrTag{
+  background-color: #00bfff;
+}
+.discountTag{
+  background-color: orange;
+}
+.recomTag{
+  background-color: red;
+}
+.recentTag{
+  background-color: purple;
+}
+.container {
+	height: 100%;
+}
+scroll-view {
+	height: 100%;
+}
+
+.header {
+	position: fixed;
+	display: -webkit-flex;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 20rpx;
+	box-sizing: border-box;
+	z-index: 1;
+	-webkit-transition: background 0.5s ease-in-out;
+}
+.header.scrolled {
+	background: #0feefe;
+}
+.header .icon {
+	width: 40rpx;
+	height: 40rpx;
+	vertical-align: top;
+}
+.header .location {
+	color: #fff;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	min-width: 100rpx;
+	max-width: 340rpx;
+	padding: 10rpx 20rpx 10rpx 10rpx;
+	border-radius: 30rpx;
+	background: rgba(0,0,0,0.3);
+	margin-right: 20rpx;
+	vertical-align: middle;
+}
+.header .search {
+	-webkit-flex: 1;
+	color: #888;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	padding: 10rpx;
+	border-radius: 30rpx;
+	background: #fff;
+	/*border-bottom: 1rpx solid #aaa;*/
+}
+
+.banner {
+	height: 330rpx;
+}
+.banner image {
+	width: 100%;
+	height: 100%;
+}
+
+.icons {
+	height: 180rpx;
+	padding: 20rpx 10rpx;
+	padding-bottom: 0;
+}
+.icons swiper-item {
+	width: 100%;
+	/*display: -webkit-flex;*/
+	/*flex-direction: row;*/
+	/*flex-wrap: wrap;*/
+	/*justify-content: center;*/
+}
+.icons .icon {
+	float: left;
+	display: -webkit-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 25%;
+	text-align: center;
+	margin: 10rpx 0;
+}
+.icons .icon image {
+	margin: 0 auto;
+	width: 100rpx;
+	height: 100rpx;
+}
+.icons .icon text {
+	color: #000;
+	font-size: 24rpx;
+	line-height: 2;
+}
+
+.section-big {
+	padding: 20rpx;
+}
+.section-big .title {
+	position: relative;
+	text-align: center;
+	font-size: 32rpx;
+	font-weight: bold;
+	line-height: 2;
+	margin-bottom: 20rpx;
+}
+.section-big .title:before {
+	content: " ";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -180rpx;
+	width: 100rpx;
+	height: 1rpx;
+	background: #000;
+}
+.section-big .title:after {
+	content: " ";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: 80rpx;
+	width: 100rpx;
+	height: 1rpx;
+	background: #000;
+}
+
+.discount .content {
+	width: 100%;
+	height: 450rpx;
+}
+
+.preferred .content {
+	width: 100%;
+	height: 556rpx;
+}
+
+.special .content {
+	width: 100%;
+	height: 181rpx;
+}
+
+#nearby {
+  padding-top: 0px;
+  padding-bottom: 10rpx
+}
+.nearby {
+	padding-left: 0;
+	padding-right: 0;
+}
+.nearby .filters {
+	display: -webkit-flex;
+	border-top: 1rpx solid #efefef;
+}
+.nearby .filters .filter {
+	-webkit-flex: 1;
+	text-align: center;
+	color: #696969;
+	font-size: 34rpx;
+	line-height: 2;
+}
+.nearby .filters .filter .v {
+	display: none;
+}
+.nearby .filters .filter.active {
+	color: #000;
+	font-weight: bold;
+}
+.nearby .filters .filter.active .v {
+	display: inline-block;
+}
+.nearby .shop {
+	padding: 10rpx 0;
+	border-top: 1rpx solid #efefef;
+}
+.nearby .shop image {
+	width: 100%;
+	height: 266rpx;
+}
+
+.loading {
+	font-size: 32rpx;
+	text-align: center;
+	line-height: 2;
+	margin-bottom: 20rpx;
+}
+.shop{
+	display: inline-block;
+	width: 100%;
+	height: 200rpx;
+}
+.shop-container{
+	font-size: 14px;
+	height: 100%;
+	width: 100%;
+}
+.shop-logo{
+	float: left;
+	width: 200rpx;
+	height: 100%;
+	background-size: cover;
+}
+.shop-detail{
+	height:100%;
+	overflow: hidden;
+	padding-left: 30rpx;
+}
+.shop-name{
+	color:#313131;
+	font-size: 32rpx;
+	margin-bottom: 15rpx;
+	line-height: 60rpx;
+}
+.shop-data{
+	color:#707070;
+}
+.start-price{
+	float:left;
+	margin-right: 50rpx;
+}
+.send-price{
+	float: left;
+}
+.send-time{
+	float: right;
+	margin-right: 10rpx;
+}
+.send-time-icon{
+	background-image: url(http://xs01.meituan.net/waimai_web/img/sprite/icons_559f3531_1.png);
+	display: inline-block;
+	background-position: -272px -426px;
+	background-repeat: no-repeat;
+	width:14px;
+	height: 14px;
+}
+page{
+	font-family: "Microsoft Yahei, Arial, Helvetica, sans-serif";
+	font-size: 12px;
+}

@@ -1,0 +1,18 @@
+<!--pages/test.wxml-->
+
+    <view class='page footer'>
+      <image src='/imgs/logo.jpg' class='img'></image>
+      <view class='page__bd page__bd_spacing'>
+        <view class='weui-footer'>
+          <text class='weui-footer__text'>Copyright@堪城圈</text>
+        </view>
+        <view class='weui-footer'>
+          <text class='weui-footer__text'>加入我们： </text>
+                    <text class='weui-footer__link'>hr@cbrcircle.com</text>
+        </view>
+          <view class='weui-footer'>
+          <text class='weui-footer__text'>联系我们： </text>
+                    <text class='weui-footer__link'>admin@cbrcircle.com</text>
+        </view>
+      </view>
+    </view>

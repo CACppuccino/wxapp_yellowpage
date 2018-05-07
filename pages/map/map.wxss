@@ -1,0 +1,5 @@
+/* map.wxss */
+.themap{
+  height: 1200rpx;
+  width: 100%;
+}

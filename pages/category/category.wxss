@@ -1,0 +1,36 @@
+/* category.wxss */
+@import '../../utils/bootstrap.wxss';
+@import '../../utils/fontaws.wxss';
+
+.moreclasp{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 600rpx;
+}
+.discount{
+  width: inherit;
+  background-color: green;
+  color: white;
+  font-size: 30rpx;
+  border-radius: 6rpx;
+}
+.phone {
+  z-index: 9999;
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+  /* bottom: 90rpx; */
+  font-size: 60rpx;
+  color: skyblue;
+}
+
+.img{
+  height: 160rpx;
+  width: 160rpx;
+}
+
+.weui-media-box__title {
+  font-family: "Microsoft Yahei";
+  padding-bottom: 10rpx;
+}

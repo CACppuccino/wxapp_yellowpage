@@ -1,0 +1,72 @@
+<!--pages/menu/menu.wxml-->
+<view style='background-color:white'>
+<view class='wphd busn'>
+  {{busnName}}
+</view>
+<view class='non' wx:if="{{sidebar.length===0}}"> 
+    该商家还未添加菜单~
+  </view>
+<!-- the whole body  -->
+<view id="thebody" class='weui-flex'>
+<!-- the side bar  -->
+<scroll-view scroll-y class='weui-flex__item' >
+<view class='weui-panel'>
+  <!-- box item  -->
+<!-- the pop window  -->
+<!-- <view class='blkglass' wx:if='{{winVisible}}' bindtap='popWindow'></view> -->
+
+  <view wx:for="{{sidebar}}"  class='weui-panel__bd sidebar {{showCate===item?"ss":"us"}}'>
+    <view class='{{showCate===item?"unwrap":"wrapper"}}' >
+    <view data-category="{{item}}" class='weui-media-box weui-media-box_text {{showCate===item?"selected":"unselected"}}' bindtap='changeCate' >
+      <view style='font-size:30rpx;color:orange;' wx:if='{{item==="discount"}}' class='fa fa-tag oneline' ><label style='color:gray;'> 折扣</label></view>
+      <view wx:else class='oneline'> <label style='color:gray;'>{{item}}</label></view>
+     
+    </view>
+    </view>
+  </view>
+  
+  
+  <!-- box item end  -->
+</view>
+</scroll-view>
+
+<scroll-view scroll-y class='weui-flex'>
+<!-- the pop window  -->
+<!-- <view class='blkglass' wx:if='{{winVisible}}' bindtap='popWindow'>
+  <view class='window'>
+      <image class='wimg' src='{{smwItem.cover}}'/>
+    <view class='info'>
+      <label>{{smwItem.name}}</label>
+      <label>{{smwItem.price}}</label>
+    </view>
+  </view>
+</view> -->
+
+<view class='weui-panel weui-panel_access'>
+  <view class='menu weui-panel__bd'>
+<!-- body start  -->
+    <view wx:for="{{menu[showCate]}}" data-item="{{item}}" bindtap='popWindow'>
+    <!-- container  -->
+    <view class='weui-media-box weui-media-box_appmsg' style='margin-left:20rpx;border-bottom:solid 1rpx #dbd9d9;'>
+      <!--image cotainer  -->
+      <view class='label weui-media-box__hd'>
+        <image src="{{item.cover}}" class='weui-media-box__thumb'/>
+      </view>
+      <!-- img container end  -->
+      <!-- text container  -->
+      <view class='label weui-media-box__bd'>
+        <label class='weui-media-box__title'>{{item.name}}</label>
+        <text class='weui-media-box__desc'>{{item.info}}</text>
+        <label class='price'>￥{{item.price}}</label>
+      </view>
+      <!-- text container end  -->
+    </view>  
+    <!-- container end  -->
+  </view>
+  <!--body end  -->
+  </view>
+</view>
+</scroll-view>
+
+</view>
+</view>
